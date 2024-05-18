@@ -1,0 +1,98 @@
+package com.array;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * ClassName: ArrayExer2
+ * Description:
+ *
+ * @Author Rin
+ * @Create 2024/2/26 下午 07:07
+ * @Version 1.0
+ */
+
+/*讀入學生成績，找出最高分，並輸入學生成績等級
+    成績>=最高分-10，等級為A
+    成績>=最高分-20，等級為B
+    成績>=最高分-30，等級為C
+    其餘          ，等級為D
+ */
+class Setting {
+    Scanner sc = new Scanner(System.in);
+    int tempMax = 0;
+    ArrayList<Integer> score = new ArrayList<Integer>();
+    void addPoint(int score){
+        this.score.add(score);
+    }
+    int getMax(){
+
+        for (int j = 0; j < score.size(); j++) {
+            if(tempMax < score.get(j)){
+                tempMax = score.get(j);
+            }
+        }return tempMax;
+    }
+    void showGrade(int tempMax){
+        for (int j = 0; j < score.size(); j++) {
+            if(score.get(j) >= tempMax-10){
+                System.out.println(j+1+"號學生分數:"+score.get(j)+"，成績為:"+'A');
+            } else if (score.get(j) >= tempMax-20) {
+                System.out.println(j+1+"號學生分數:"+score.get(j)+"，成績為:"+'B');
+            } else if (score.get(j) >= tempMax-30) {
+                System.out.println(j+1+"號學生分數:"+score.get(j)+"，成績為:"+'C');
+            }else System.out.println(j+1+"號學生分數:"+score.get(j)+"，成績為:"+'D');
+        }
+    }
+}
+public class ArrayExer2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Setting s1 = new Setting();
+        int times = 1;
+        loopOptions:do{
+            System.out.println("0.離開");
+            System.out.println("1.輸入成績");
+            System.out.println("2.顯示等級");
+            System.out.println("3.更改成績");
+            System.out.println("請選擇0-3");
+            boolean isInt = sc.hasNextInt();
+            if(isInt == true) {
+                int selection = sc.nextInt();
+                if(selection >= 0 && selection <= 3) {
+                    switch (selection) {
+                        case 0:
+                            System.out.println("-----------------正在退出-------------------");
+                            break loopOptions;
+                        case 1:
+                            System.out.println("請輸入成績(從學生" + times + "號開始):");
+                            s1.addPoint(sc.nextInt());
+                            times++;
+                            System.out.println("--------------------------------------------");
+                            break;
+                        case 2:
+                            s1.showGrade(s1.getMax());
+                            System.out.println("--------------------------------------------");
+                            break;
+                        case 3:
+                            System.out.println("請輸入欲更改的學生座號:");
+                            int number = sc.nextInt();
+                            System.out.println("請輸入新的分數:");
+                            int newPoint = sc.nextInt();
+                            s1.score.set(number - 1, newPoint);
+                            System.out.println("--------------------------------------------");
+                            break;
+                    }
+                }else {
+                    sc.nextLine();
+                    System.out.println("-> 請輸入0-3!!!!!!!!");
+                    System.out.println("--------------------------------------------");
+                }
+            }else {
+                sc.nextLine();
+                System.out.println("-> 請輸入整數!!!!!!!!");
+                System.out.println("--------------------------------------------");
+            }
+        }while (true);
+    }
+}
