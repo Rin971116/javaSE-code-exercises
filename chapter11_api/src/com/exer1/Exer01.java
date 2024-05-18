@@ -42,7 +42,7 @@ public class Exer01 {
     @Test
     public void test2() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1 = sdf.parse("2022-12-13");
+        Date date1 = sdf.parse("2022-11-13");
 
         System.out.println(date1);
 
