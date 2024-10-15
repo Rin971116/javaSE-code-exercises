@@ -1,4 +1,4 @@
-package com.collections;
+package com.collections_tool_class;
 
 import java.util.*;
 
@@ -45,6 +45,7 @@ public class CollectionsTest {
         List list3 = new ArrayList();
         //synchronizedXxx()
         List threadSafeList = Collections.synchronizedList(list3); //返回一個線程安全的list物件
+        Map threadSafeMap = Collections.synchronizedMap(new HashMap<String,Integer>()); //返回一個線程安全的map物件
 
         //inner class
         class Task implements Runnable{

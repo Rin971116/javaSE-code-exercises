@@ -1,4 +1,4 @@
-package reflectapply.apply2;
+package reflectapply;
 
 import org.junit.Test;
 
@@ -26,7 +26,7 @@ public class OtherTest {
     }
 
     /**
-     * 2. 獲取運行時類實現的接口
+     * 2. 獲取運行時類 實現的接口
      */
     @Test
     public void test2() throws ClassNotFoundException {

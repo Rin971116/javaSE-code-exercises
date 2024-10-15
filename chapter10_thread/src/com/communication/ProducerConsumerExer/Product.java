@@ -21,7 +21,7 @@ public class Product {
         synchronized (obj) {
             if (amount >= 20){
                 try {
-                    obj.wait(); //定義:讓直行到此語句的線程暫停，並釋放鎖(這邊指obj)
+                    obj.wait(); //定義:讓執行到此語句的線程暫停，並釋放鎖(這邊指obj)
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

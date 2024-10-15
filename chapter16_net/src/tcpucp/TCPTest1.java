@@ -12,12 +12,14 @@ import java.net.Socket;
 /**
  * ClassName:
  * Description:
+ *                  TCP傳輸 特點在於可靠、安全，三次握手，確認對方端點在，才傳輸數據
  *
+ *                  端點使用: ServerSocket 、 Socket
  * @Author Rin
  * @Create 2024/6/7 下午 01:17
  * @Version 1.0
  */
-public class TCPTest {
+public class TCPTest1 {
     @Test
     public void server() {
 

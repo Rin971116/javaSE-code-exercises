@@ -1,0 +1,2 @@
+這是從bfferedwriter輸入的測試字串
+這是從bfferedwriter輸入的測試字串2

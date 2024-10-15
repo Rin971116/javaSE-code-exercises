@@ -16,7 +16,7 @@ import java.util.TreeMap;
 *                                |-----子接口: Set:存儲無序的、不可重複的數據 (高中學習的集合的概念)
 *                                        |----- HashSet(主要實現類)、LinkedHashSet、TreeSet
 *
-*                            Java.util.Map(接口):儲存一對一對的數據(key-value鍵值對，(x1,x2)、(x1,x2) -----> y=f(x),類似於高中的函數)
+*                            Java.util.Map(接口):無序的儲存一對一對的數據(key-value鍵值對，(x1,x2)、(x1,x2) -----> y=f(x),類似於高中的函數)
 *                                        |----- HashMap(主要實現類): 線程不安全，可添加null，底層使用數組+單向鏈表+紅黑樹結構存儲。
  *                                              |----- LinkedHashMap: HashMap使用之結構基礎上，增加一對雙向鏈表，用於紀錄元素添加的先後順序，
  *                                                                    進而在我們遍歷時，能夠按添加的順序顯示，

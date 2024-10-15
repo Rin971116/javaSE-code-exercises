@@ -14,7 +14,7 @@ import java.io.IOException;
  * @Create 2024/5/31 下午 06:59
  * @Version 1.0
  */
-public class FileReaderTest {
+public class FileReader_FileInputStreamTest {
     /**
      * 基礎方法，一個一個獲取字符
      */

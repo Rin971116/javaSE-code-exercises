@@ -1,4 +1,4 @@
-package reflectapply.apply2;
+package reflectapply;
 
 /**
  * ClassName:

@@ -1,4 +1,4 @@
-package reflectapply.apply2;
+package reflectapply;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 /**
  * ClassName:
  * Description:
- *
+ *                  一次編譯，只會加載一次類，該類就會放在 方法區
  * @Author Rin
  * @Create 2024/6/19 下午 02:02
  * @Version 1.0
@@ -15,9 +15,14 @@ import java.lang.reflect.Field;
 public class ReflectTest {
     @Test
     public void test1() throws Exception {
-        Class<Person> clazz = Person.class;
+        //加載類 的方式1.
+        //Class<Person> clazz1 = Person.class;
 
-        Person person = clazz.newInstance();
+        //加載類 的方式2.(常用):
+        //Class.forName(String className) 會加載類，並生成一個對應的Clazz對象，但其概念不是一般的構造器造對象，是執行 "類構造器" <clinit>()加載類
+        Class clazz = Class.forName("reflectapply.Person");
+
+        Person person = (Person) clazz.newInstance();
 
         //getField()只能獲取public的屬性
 //        Field nameField = clazz.getField("name");

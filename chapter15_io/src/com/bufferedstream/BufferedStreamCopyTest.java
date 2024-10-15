@@ -13,7 +13,7 @@ import java.io.*;
  * @Create 2024/6/4 上午 08:54
  * @Version 1.0
  */
-public class BufferedStreamTest {
+public class BufferedStreamCopyTest {
     /**
      * BufferedInputStream、BufferedOutputStream 複製一張圖片
      */
@@ -50,4 +50,5 @@ public class BufferedStreamTest {
         }
 
     }
+
 }

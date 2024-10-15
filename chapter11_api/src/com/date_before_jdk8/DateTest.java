@@ -1,4 +1,4 @@
-package com.date_beforejdk8;
+package com.date_before_jdk8;
 
 import org.junit.Test;
 

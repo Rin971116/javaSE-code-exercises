@@ -29,7 +29,7 @@ public class ThrowTest {
         Student s = new Student();
         try {
             s.regist2(-111);
-        }catch(Exception e){
+        }catch(SelfDefineException e){
             e.printStackTrace();
         }
     }
@@ -60,14 +60,14 @@ class Student {
     /**
      * 2.正常方法，在方法型參後方，使用 throws 把異常拋給調用此方法者去解決。
      * @param id
-     * @throws Exception
+     * @throws SelfDefineException
      */
-    public void regist2(int id) throws Exception{
+    public void regist2(int id) throws SelfDefineException{
 
         if (id >= 0) {
             this.id = id;
         } else {
-            throw new Exception("輸入非法id"); //自定義規則下，手動拋出異常。
+            throw new SelfDefineException("輸入非法id"); //自定義規則下，手動拋出異常。
         }
 
     }

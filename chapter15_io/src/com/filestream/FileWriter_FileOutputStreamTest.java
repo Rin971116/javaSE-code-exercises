@@ -14,7 +14,7 @@ import java.io.IOException;
  * @Create 2024/5/31 下午 06:59
  * @Version 1.0
  */
-public class FileWriterTest {
+public class FileWriter_FileOutputStreamTest {
     @Test
     public void test1(){
         FileWriter fileWriter = null;

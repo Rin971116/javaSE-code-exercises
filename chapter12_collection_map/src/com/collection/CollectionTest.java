@@ -17,7 +17,7 @@ import java.util.List;
  *                  |-----子接口: Set:存儲無序的、不可重複的數據 (高中學習的集合的概念)
  *                          |----- HashSet(主要實現類)、LinkedHashSet、TreeSet
  *
- *              Java.util.Map(接口):儲存一對一對的數據(key-value鍵值對，(x1,x2)、(x1,x2) -----> y=f(x),類似於高中的函數)
+ *              Java.util.Map(接口):儲存一對一對的數據(key-value鍵值對，(x1,x2)、(x3,x4) -----> y=f(x),類似於高中的函數)
  *                          |----- HashMap(主要實現類)、LinkedHashMap、TreeMap、Properties、Hashtable(古老、Hashtable(古老、線程安全、已完全被取代)
  *
  *
