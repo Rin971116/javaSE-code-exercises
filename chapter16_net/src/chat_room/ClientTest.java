@@ -17,7 +17,7 @@ public class ClientTest {
         Socket socket = null;
         try {
             //建立一個socket，對到對應的server端
-            socket = new Socket("192.168.3.25", 8989);
+            socket = new Socket("localhost", 8989);
             //開一個發訊息的線程
             SendMessageThread smt = new SendMessageThread(socket);
             smt.start();
